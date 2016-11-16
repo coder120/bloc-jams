@@ -62,7 +62,9 @@ body{
     
  }
 
-
+.links-container .navbar-link:active {
+     background-color: white;
+ }
  .container {
      margin: 0 auto;
      max-width: 64rem;

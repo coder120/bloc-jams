@@ -77,8 +77,7 @@ var createSongRow = function(songNumber, songName, songLength) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 var findParentByClassName = function(element, targetClass) {
     if (element) {
@@ -128,26 +127,18 @@ var clickHandler = function(targetElement) {
 
  };
 
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
+ 
  var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
 
  var songRows = document.getElementsByClassName('album-view-song-item');
 
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
 
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
 
 var currentlyPlayingSong = null;
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
@@ -163,25 +154,19 @@ var currentlyPlayingSong = null;
  songListContainer.addEventListener('mouseover', function(event) {
   if (event.target.parentElement.className === 'album-view-song-item') {
               event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
        
       var songItem = getSongItem(event.target);
           
       if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
             songItem.innerHTML = playButtonTemplate;
            }
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
-=======
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
+ 
          }
      });
      for (var i = 0; i < songRows.length; i++) {
          songRows[i].addEventListener('mouseleave', function(event) {
-           
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
 // #1
              var songItem = getSongItem(event.target);
              var songItemNumber = songItem.getAttribute('data-song-number');
@@ -195,12 +180,11 @@ var currentlyPlayingSong = null;
              songRows[i].addEventListener('click', function(event) {
              // Event handler call
                   clickHandler(event.target);
-=======
+ 
              this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
-=======
+ 
              this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
->>>>>>> bf5368e851c198752323fb735a867a151120ed47
+ 
          });
      }
  };
